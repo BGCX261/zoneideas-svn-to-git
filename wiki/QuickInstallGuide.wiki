@@ -1,0 +1,54 @@
+#labels Phase-Deploy,Featured
+= Quick Install Guide =
+
+ZoneIdeas are really easy to install. Follow next few steps and you will have running site in no time.
+
+To run ZoneIdeas your host just needs a couple of things:
+  
+  * PHP (Version 5.2 or greater) 
+  * MySQL (Version 4.x or greater) 
+  * Web server (We recommend [http://www.lighttpd.net/ Lighttpd] or Apache, IIS or any other server that supports running PHP scripts)
+
+If you don't now what is it — you can always ask you hosting provider. Here's a letter you can send to your hosting provider.
+
+{{{
+I'm interested in running the open-source ZoneIdeas http://zoneideas.org/ web software and I was wondering if my account supported the following:
+
+  * PHP 5.2 or greater
+  * MySQL 4.0 or greater
+
+Thanks!
+}}}
+
+
+If you are planning use ZoneIdeas on your computer, check, for example, XAMPP package (http://www.apachefriends.org/en/xampp.html).
+
+== Steps for installation ==
+
+1. Download zip package with ZoneIdeas source files from (http://zoneideas.org/download/).
+
+2. Unzip the package you downloaded to the directory of your choice on your webserver.
+
+3. Create new database for ZoneIdeas on your MySQL server (Probably with phpMyAdmin or CPanel or ask you hosting provider to do this for you).
+
+4. Open *settings.php* file in your favorite editor (Notepad etc.).
+
+5. Fill nessesary fields with info from your account to MySQL server
+
+{{{  
+  define("MYSQL_HOST",     "localhost" );       // host name - in most cases it is localhost
+  define("MYSQL_DATABASE", "database_name" );   // database name - database you created in step 3)
+  define("MYSQL_USER",     "database_user" );   // database user that have access to the database
+  define("MYSQL_PASSWORD", "" );                // database user password 
+
+}}}
+  If you are planning use ZoneIdeas on shared hosting server, you will get needed this info from your hosting provider.
+  It is possible you will have to ask them to create new database for you. It depends on hosting settings and your hosting plan.
+  
+
+6. Create all database tables required to run ZoneIdeas with file sql_schema.sql
+
+
+7. Access directory on web server you inserted ZoneIdeas in with your browser: 
+for example if you unzipped ZoneIdeas directory to root of web server directory on your local machine, write to address bar of your browser:  http://localhost/zoneideas
+You need running web server and MySQL though ;)

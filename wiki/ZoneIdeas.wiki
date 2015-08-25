@@ -1,0 +1,3 @@
+ZoneIdeas is a tool intended to help organize and rate Ideas in you company, group or your self.
+
+Current Version is : 0.3
